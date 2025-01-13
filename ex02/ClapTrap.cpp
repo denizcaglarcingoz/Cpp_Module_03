@@ -27,7 +27,7 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 	_hitPoints = other.getHitPoints();
 	_energyPoints = other.getEnergyPoints();
 	_attackDamage = other.getAttackDamage();
-	std::cout << "ClapTrap copy constructed" << std::endl;
+	std::cout << "New ClapTrap copied from Claptrap " << _name << std::endl;
 }
 ClapTrap&	ClapTrap::operator=(const ClapTrap& other)
 {

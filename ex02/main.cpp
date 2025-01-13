@@ -1,13 +1,10 @@
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 #include <iostream>
-
-
-
 
 int main( void )
 {
-	ClapTrap	Anne;
-	ClapTrap	Bob("Bob");
+	FragTrap	Anne("Anne");
+	FragTrap	Bob("Bob");
 
 	std::string anneName = "Anne";
 	Anne.setName(anneName);
@@ -16,6 +13,7 @@ int main( void )
 	Anne.attack("Bob");
 	Bob.takeDamage(Anne.getAttackDamage());
 
+	Anne.highFiveGuys();
 	Anne.setAttackDamage(1);
 	Anne.attack("Bob");
 	Bob.takeDamage(Anne.getAttackDamage());
@@ -28,5 +26,8 @@ int main( void )
 	Bob.setHitPoints(0);
 	Bob.attack("Anne");
 
+	ClapTrap* fragtrapp = new FragTrap();
+	fragtrapp->attack("Bob");
+	delete fragtrapp;
 	return 0;
 }

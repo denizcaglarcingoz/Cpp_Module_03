@@ -1,13 +1,11 @@
+#include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 #include <iostream>
 
-
-
-
 int main( void )
 {
-	ClapTrap	Anne;
-	ClapTrap	Bob("Bob");
+	ScavTrap	Anne;
+	ScavTrap	Bob("Bob");
 
 	std::string anneName = "Anne";
 	Anne.setName(anneName);
@@ -16,7 +14,11 @@ int main( void )
 	Anne.attack("Bob");
 	Bob.takeDamage(Anne.getAttackDamage());
 
+	Anne.guardGate();
 	Anne.setAttackDamage(1);
+	ScavTrap Bobby(Anne);
+	std::cout <<"Bobby name " << Bobby.getName()<< std::endl;
+	std::cout <<"Bobby attack damage value " << Bobby.getAttackDamage() << std::endl;
 	Anne.attack("Bob");
 	Bob.takeDamage(Anne.getAttackDamage());
 	

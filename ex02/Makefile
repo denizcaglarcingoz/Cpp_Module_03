@@ -1,8 +1,8 @@
-EXECUTABLE := claptrap
-INCLUDES = ClapTrap.hpp
+EXECUTABLE := fragtrap
+INCLUDES = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 CPP = c++
 OBJ_DIR = obj
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
